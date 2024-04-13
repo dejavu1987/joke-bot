@@ -86,13 +86,13 @@ export function Chat() {
           {
             user: "Jokes Bot",
             message:
-              "Here's a joke: " +
+              "Here's a joke:\n" +
               jokes[state.context.currentCategory][
                 Math.floor(
                   Math.random() * jokes[state.context.currentCategory].length
                 )
               ] +
-              ".\n Do you want to hear another one?",
+              ".\nDo you want to hear another one?",
           },
         ]);
         break;
@@ -177,7 +177,7 @@ export function Chat() {
           }}
         >
           <Textarea
-            className="flex-1 h-[20px]"
+            className="flex-1 h-[40px]"
             placeholder="Type a message..."
             onKeyUp={(e) => {
               if (e.key === "Enter") {
